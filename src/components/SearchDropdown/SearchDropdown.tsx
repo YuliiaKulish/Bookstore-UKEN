@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import { Link } from 'react-router-dom';
 import type { BookBase } from '../../types/BookBase';
 import './SearchDropdown.scss';
@@ -29,7 +28,8 @@ export const SearchDropdown: React.FC<SearchDropdownProps> = ({
                 <img
                   className="search-dropdown__image"
                   src={
-                    new URL(`/books/${book.images[0]}`, import.meta.url).href
+                    new URL(`../../books/${book.images[0]}`, import.meta.url)
+                      .href
                   }
                   alt={book.name}
                 />

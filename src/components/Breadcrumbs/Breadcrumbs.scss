@@ -1,0 +1,60 @@
+@use '../../styles/utils/mixins' as *;
+
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 16px;
+
+  @include on-tablet {
+    margin-bottom: 24px;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 12px;
+
+    text-transform: uppercase;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    &:not(:last-child) {
+      display: none;
+
+      @include on-tablet {
+        display: inline;
+      }
+    }
+
+    &--type {
+      overflow: visible;
+      text-overflow: initial;
+    }
+
+    &--title {
+      letter-spacing: 0.01em;
+      color: #89939a;
+    }
+  }
+
+  &__arrow {
+    color: #89939a;
+
+    &--tablet {
+      display: none;
+
+      @include on-tablet {
+        display: block;
+      }
+    }
+  }
+
+  &__dots {
+    display: inline;
+
+    @include on-tablet {
+      display: none;
+    }
+  }
+}

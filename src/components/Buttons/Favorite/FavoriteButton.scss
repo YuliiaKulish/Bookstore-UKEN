@@ -1,0 +1,16 @@
+.favorite-button {
+  width: 40px;
+  height: var(--button-height);
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-elements);
+  background-color: var(--color-white);
+
+  &:hover {
+    border: 1px solid var(--color-primary);
+  }
+
+  &:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+}

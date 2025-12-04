@@ -1,0 +1,72 @@
+@use './mixins' as *;
+@import '../vars.css';
+
+body {
+  font-family: var(--font-primary);
+
+  font-weight: var(--fw-medium);
+  font-size: var(--button-size);
+
+  color: var(--color-primary);
+  background-color: var(--color-hover-bg);
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+.site {
+  display: grid;
+  min-height: 100dvh;
+  grid-template-rows: 1fr auto;
+  grid-auto-columns: minmax(0, 1fr);
+  overflow-x: hidden;
+}
+
+.main {
+  display: grid;
+  row-gap: 56px;
+  padding-block: 32px;
+
+  @include on-tablet {
+    padding-block: 40px;
+  }
+
+  @include on-desktop {
+    row-gap: 80px;
+    padding-block: 64px;
+  }
+}
+
+.container {
+  width: 100%;
+  padding-inline: var(--space-md);
+  margin: 0 auto;
+
+  @include on-mobile {
+    max-width: var(--mobile);
+  }
+
+  @include on-tablet {
+    max-width: var(--tablet);
+    padding-inline: var(--space-lg);
+  }
+
+  @include on-desktop {
+    max-width: var(--desktop);
+    padding-inline: var(--space-xl);
+  }
+}
+
+.section__title {
+  font-size: 22px;
+  line-height: 31px;
+  font-weight: var(--fw-bold);
+  color: var(--color-primary);
+
+  @include on-tablet {
+    font-size: var(--mob-h1-size);
+    line-height: var(--h2-line-height);
+    letter-spacing: -0.01em;
+  }
+}

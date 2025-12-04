@@ -1,0 +1,119 @@
+@use '../../styles/utils/mixins' as *;
+
+.item-cart {
+  border: 1px solid var(--color-elements);
+  border-radius: 16px;
+  padding: 16px;
+  width: 288px;
+  height: 160px;
+  background-color: var(--color-white);
+  display: block;
+
+  @include on-tablet {
+    padding: 24px;
+    width: 592px;
+    height: 128px;
+    display: flex;
+    gap: 24px;
+  }
+
+  @include on-desktop {
+    width: 752px;
+  }
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media (max-width: 639px) {
+      margin-bottom: 16px;
+    }
+
+    @include on-tablet {
+      gap: 24px;
+    }
+  }
+
+  &__img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+  }
+
+  &__descr {
+    width: 128px;
+
+    @include on-tablet {
+      width: 176px;
+    }
+
+    @include on-desktop {
+      width: 336px;
+    }
+  }
+
+  &__name,
+  &__author {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__name {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+  }
+
+  &__author {
+    line-height: 21px;
+    color: var(--color-secondary);
+  }
+
+  &__btn {
+    width: 32px;
+    height: 32px;
+
+    &.disabled {
+      color: var(--color-secondary);
+    }
+
+    &--delete {
+      width: 16px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include on-tablet {
+      justify-content: space-between;
+      flex-grow: 1;
+    }
+  }
+
+  &__amount {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+  }
+
+  &__price {
+    font-weight: var(--fw-semibold);
+    font-size: 20px;
+
+    @include on-tablet {
+      font-size: 22px;
+
+      line-height: 31px;
+    }
+  }
+}

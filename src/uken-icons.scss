@@ -1,0 +1,92 @@
+@font-face {
+  font-family: uken;
+  src: url('../fonts/uken-icons/uken.eot?82245497');
+  src:
+    url('../fonts/uken-icons/uken-icons.ttf?82245497') format('truetype'),
+    url('../fonts/uken-icons/uken.svg?82245497#uken') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^='icon-']::before,
+[class*=' icon-']::before {
+  font-family: uken, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 16px;
+  margin-right: 0.2em;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 16px;
+  margin-left: 0.2em;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-home::before {
+  content: '\e800';
+}
+
+.icon-cart::before {
+  content: '\e801';
+}
+
+.icon-heart::before {
+  content: '\e802';
+}
+
+.icon-heart-filled {
+  color: #eb5757;
+
+  &::before {
+    content: '\e803';
+  }
+}
+
+.icon-search::before {
+  content: '\e804';
+}
+
+.icon-headphones::before {
+  content: '\e805';
+}
+
+.icon-car::before {
+  content: '\e806';
+}
+
+.icon-menu::before {
+  content: '\e807';
+}
+
+.icon-arrow-up::before {
+  content: '\e808';
+}
+
+.icon-arrow-down::before {
+  content: '\e809';
+}
+
+.icon-arrow-right::before {
+  content: '\e80a';
+}
+
+.icon-arrow-left::before {
+  content: '\e80b';
+}
+
+.icon-close::before {
+  content: '\e80c';
+}
+
+.icon-plus::before {
+  content: '\e80d';
+}
+
+.icon-minus::before {
+  content: '\e80e';
+}

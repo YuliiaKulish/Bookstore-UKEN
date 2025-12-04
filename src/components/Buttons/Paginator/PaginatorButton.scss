@@ -1,0 +1,19 @@
+.paginator-button {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid var(--color-elements);
+  background-color: var(--color-white);
+
+  &:hover {
+    border: 1px solid var(--color-primary);
+  }
+
+  &:active,
+  .is-active {
+    background-color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+    color: var(--color-white);
+  }
+}

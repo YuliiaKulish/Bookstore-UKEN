@@ -1,0 +1,26 @@
+@use '../../styles/utils/mixins' as *;
+
+.paginator {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 24px;
+
+  @include on-tablet {
+    margin-top: 40px;
+  }
+}
+
+.slider-left {
+  padding-right: 8px;
+}
+
+.slider-right {
+  padding-left: 8px;
+}
+
+.is-active {
+  background-color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  color: var(--color-white);
+}

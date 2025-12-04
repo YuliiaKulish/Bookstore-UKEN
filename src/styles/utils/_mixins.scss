@@ -1,0 +1,42 @@
+$mobile: 320px;
+$tablet: 640px;
+$desktop: 1200px;
+
+@mixin on-mobile {
+  @media (min-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin on-tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin on-desktop {
+  @media (min-width: $desktop) {
+    @content;
+  }
+}
+
+@mixin page-grid {
+  --columns: 4;
+
+  display: grid;
+  column-gap: 16px;
+
+  grid-template-columns: repeat(var(--columns), 1fr);
+
+  @include on-tablet {
+    --columns: 12;
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
+
+  @include on-desktop {
+    --columns: 24;
+
+    grid-template-columns: repeat(var(--columns), 1fr);
+  }
+}

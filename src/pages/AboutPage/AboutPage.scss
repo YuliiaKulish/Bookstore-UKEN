@@ -1,0 +1,132 @@
+@use '../../styles/utils/mixins' as *;
+
+.about-layout {
+  display: flex;
+  background: url('../../books/img/about.gif') center/cover repeat;
+  margin-block: -30px;
+
+  @include on-tablet {
+    margin-block: -40px;
+  }
+
+  @include on-desktop {
+    margin-block: -64px;
+  }
+}
+
+.static-left {
+  margin-left: 10%;
+  width: 35%;
+  padding: 40px;
+  padding-right: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  color: rgb(255, 255, 255);
+  font-size: 17px;
+  line-height: 1.7;
+  z-index: 2;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+.static-left h2 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.static-left p {
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 300;
+}
+
+.star-wars-background {
+  height: 100vh;
+  width: 65%;
+  overflow: hidden;
+
+  position: relative;
+}
+
+.crawl-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  perspective: 400px;
+}
+
+.crawl {
+  font-size: 35px;
+  line-height: 1.6;
+  text-align: center;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: 50px;
+  color: #fffacd;
+  animation: crawl 40s linear infinite;
+  transform-origin: 50% 100%;
+  text-shadow:
+    -1px -1px 0 black,
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black;
+}
+
+@keyframes crawl {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(-300%);
+  }
+}
+
+@media (min-width: 640px) and (max-width: 1440px) {
+  .static-left {
+    margin-top: 5%;
+    margin-left: 4%;
+    width: 100%;
+    padding: 20px;
+    padding-right: 20px;
+    font-size: 16px;
+  }
+
+  .static-left h2 {
+    font-size: 32px;
+  }
+
+  .crawl {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 639px) {
+  .static-left {
+    margin-top: 5%;
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-size: 11px;
+  }
+
+  .static-left h2 {
+    font-size: 20px;
+  }
+
+  .crawl {
+    font-size: 10px;
+    text-align: center;
+    max-width: 100%;
+    margin-right: 15%;
+    margin-bottom: 15%;
+    animation: crawl 0s linear infinite;
+  }
+}

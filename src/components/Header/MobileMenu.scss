@@ -1,0 +1,129 @@
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-white);
+  z-index: 101;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  overflow-y: auto;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--color-elements);
+  }
+
+  &__close {
+    width: 48px;
+    text-align: center;
+    border-left: 1px solid var(--color-elements);
+    line-height: 48px;
+  }
+
+  &__logo-image {
+    height: 48px;
+  }
+
+  &__logo {
+    width: 96px;
+    display: flex;
+    justify-content: center;
+  }
+
+  &__nav-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+
+  &__nav-link {
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-size: 12px;
+    position: relative;
+    display: inline-block;
+    line-height: 24px;
+    text-transform: uppercase;
+
+    &.active::after {
+      content: '';
+      background-color: var(--color-primary);
+      height: 2px;
+      box-sizing: border-box;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+
+    &.active {
+      color: var(--color-primary);
+    }
+  }
+
+  &__search {
+    margin: 0 auto 98px;
+    position: relative;
+  }
+
+  .search-dropdown {
+    position: absolute;
+    z-index: 102;
+  }
+
+  &__categories {
+    margin-bottom: auto;
+  }
+
+  &__icons {
+    display: flex;
+    min-height: 64px;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 64px;
+    border-top: 1px solid var(--color-elements);
+    margin-top: auto;
+  }
+
+  &__icon-wrapper {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:first-child {
+      border-right: 1px solid var(--color-elements);
+    }
+  }
+}
+
+.mobile-menu__quantity-wrapper {
+  position: relative;
+}
+
+.mobile-menu__quantity {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -100%);
+  width: 14px;
+  height: 14px;
+  font-weight: 600;
+  font-size: 9px;
+  text-align: center;
+  color: var(--color-white);
+  border-radius: 100%;
+  background-color: var(--color-red);
+  border: 1px solid var(--color-white);
+  z-index: 100;
+}

@@ -1,0 +1,47 @@
+@use '../../styles/utils/mixins' as *;
+
+.product-swiper-wrapper {
+  position: relative;
+}
+
+.product-list__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.custom-buttons {
+  display: flex;
+  gap: 16px;
+
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none !important;
+}
+
+.custom-prev,
+.custom-next {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-navigation-icon {
+  display: none;
+}
+
+.swiper-item {
+  width: 215px;
+
+  @include on-tablet {
+    width: 272px;
+  }
+}

@@ -1,0 +1,69 @@
+.search-dropdown {
+  margin-top: 10px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: var(--color-white);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+.search-dropdown-wrapper {
+  max-height: calc(-8.75rem + 100vh);
+  overflow: auto;
+  padding-right: 8px;
+}
+
+.search-dropdown__title {
+  font-size: 1rem;
+  line-height: 1.21;
+  font-weight: 600;
+  letter-spacing: -0.1px;
+  padding-bottom: 16px;
+}
+
+.search-dropdown__item {
+  padding: 8px 0;
+  border-bottom: 1px solid rgb(230, 233, 232);
+}
+
+.search-dropdown__book-title {
+  font-size: 13px;
+  line-height: 1.4;
+  letter-spacing: -0.25px;
+  font-family: Inter, 'Inter Fallback', sans-serif;
+  font-weight: 500;
+  padding-bottom: 4px;
+}
+
+.search-dropdown__link {
+  cursor: pointer;
+  display: flex;
+  column-gap: 8px;
+}
+
+.search-dropdown__image {
+  width: 50px;
+  height: auto;
+  object-fit: cover;
+}
+
+.search-dropdown__book-author {
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.4;
+  letter-spacing: -0.1px;
+  font-weight: 400;
+  color: #9396a8;
+}
+
+.search-dropdown__book-price {
+  font-size: 15px;
+  line-height: 1.45;
+  letter-spacing: -0.2px;
+  font-weight: 600;
+}

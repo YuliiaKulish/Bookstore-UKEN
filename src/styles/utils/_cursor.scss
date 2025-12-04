@@ -1,0 +1,27 @@
+html {
+  cursor: url('../../assets/cursor-black-white.svg'), pointer;
+}
+
+a {
+  cursor: url('../../assets/cursor-black.svg'), pointer;
+}
+
+button {
+  cursor: url('../../assets/cursor-black.svg'), pointer;
+}
+
+a:hover {
+  cursor: url('../../assets/cursor-black.svg'), pointer;
+}
+
+button:hover {
+  cursor: url('../../assets/cursor-black.svg'), pointer;
+}
+
+svg:hover {
+  cursor: url('../../assets/cursor-black.svg'), pointer;
+}
+
+.swiper-pagination-bullet:hover {
+  cursor: url('../../assets/cursor-black.svg'), pointer;
+}

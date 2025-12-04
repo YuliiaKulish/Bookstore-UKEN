@@ -1,0 +1,12 @@
+.error {
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__img {
+    height: 500px;
+    width: 625px;
+  }
+}

@@ -1,0 +1,140 @@
+@use '../../styles/utils/mixins' as *;
+@import '../../styles/vars.css';
+
+.book {
+  &__images {
+    margin-bottom: 32px;
+
+    @include on-tablet {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 24px;
+      margin-bottom: 0;
+    }
+  }
+
+  &__main-img {
+    width: 278px;
+    height: 278px;
+    margin-bottom: 41px;
+    border-radius: 10px;
+
+    object-fit: contain;
+
+    @include on-tablet {
+      width: 205px;
+      height: 316px;
+      margin-bottom: 0;
+    }
+
+    @include on-desktop {
+      width: 337px;
+      height: 520px;
+    }
+  }
+
+  &__img-thumb {
+    display: flex;
+    gap: 8px;
+
+    overflow-x: scroll;
+
+    @include on-tablet {
+      flex-direction: column;
+      overflow: visible;
+    }
+  }
+
+  &__secondary-img {
+    min-width: 64px;
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+
+    border: 1px solid #e2e6e9;
+    border-radius: 4px;
+    padding: 8px;
+    background-color: var(--color-white);
+
+    &.active {
+      border: 1px solid var(--color-primary);
+    }
+
+    @include on-desktop {
+      width: 80px;
+      height: 80px;
+    }
+  }
+}
+
+.gallery-modal {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1200;
+
+  &__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+    background-color: var(--color-white);
+    padding: 32px 48px;
+    border-radius: 16px;
+    box-shadow: 0 12px 40px rgba(15, 23, 42, 0.35);
+    width: min(95vw, 840px);
+    height: min(90vh, 720px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  &__close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    border: none;
+    background: transparent;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(15, 23, 42, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &--prev {
+      left: 16px;
+    }
+
+    &--next {
+      right: 16px;
+    }
+  }
+}
